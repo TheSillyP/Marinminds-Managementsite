@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>MarinMinds</title>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/sails.io.js-dist@1.2.1/sails.io.min.js"></script>
+    <script>
+      io.sails.url = 'https://marinminds.decipher.digital';
+      // io.sails.url = 'http://localhost:1601';
+      io.sails.autoConnect = true;
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

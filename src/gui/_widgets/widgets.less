@@ -1,0 +1,63 @@
+.widget {
+  .widget--widget {
+    display: block;
+    border-radius: @border-radius-base;
+    background: white;
+    position: relative;
+    height: calc(200px + 2em);
+    overflow: hidden;
+    border: 1px solid @mm-bg-green;
+    margin-bottom: 2em;
+
+    &.widget--widget-events {
+      background: @mm-bg-green;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  .widget--widget--background-graph {
+    width: calc(100% - 2em);
+    height: 200px;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+  }
+
+  .widget--widget--title {
+    font-size: 2em;
+    font-weight: bold;
+    color: @mm-bg-green;
+    position: absolute;
+    left: 16px;
+    bottom: 50px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .widget--widget-finance .widget--widget--title {
+    bottom: 8px;
+  }
+
+  .widget--widget--value {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: #999;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .widget--widget-events .widget--widget--title {
+    color: white;
+  }
+}

@@ -1,0 +1,118 @@
+@bg-colour: #eeeff5;
+
+.onboarding {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: @mm-bg-green;
+
+  aside.onboarding--left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+  }
+
+  h1.onboarding--login-form--title {
+    font-weight: 800;
+    font-size: 2.5em;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: black;
+    margin: 0 0 1em 0;
+  }
+
+  p.onboarding--login-form--description {
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    margin: 0 0 2em 0;
+  }
+
+  .onboarding--submit-button {
+    height: 70px;
+    font-weight: 500 !important;
+    font-size: 1.4em !important;
+  }
+
+  .onboarding--forgot-password-button {
+    font-size: 1.3em;
+    color: #767776;
+  }
+
+  a.onboarding--brand {
+    display: block;
+    width: 18vw;
+    height: 80px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(/images/marinminds-id.png);
+    margin-bottom: 80px;
+  }
+
+  .onboarding--login-form--codeinput {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 35px;
+    background: #eeeff5;
+    color: black;
+    font-weight: 800;
+    font-size: 2em;
+  }
+
+  .onboarding--login-form {
+    display: block;
+    width: 30vw;
+  }
+
+  aside.onboarding--right-side {
+    display: block;
+    width: 50vw;
+    height: 100vh;
+    padding-left: 10px;
+
+    .onboarding--right-side--promo-image {
+      display: block;
+      height: 100vh;
+      background-size: cover;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .onboarding {
+    aside.onboarding--left-side {
+      width: 100vw;
+      border-right: 10px solid @mm-bg-green;
+    }
+
+    a.onboarding--brand {
+      width: 50vw;
+      height: 100px;
+      margin-bottom: 30px;
+    }
+
+    h1.onboarding--login-form--title {
+      font-size: 1.5em;
+    }
+
+    .onboarding--login-form {
+      width: 80vw;
+    }
+
+    aside.onboarding--right-side {
+      display: none;
+    }
+  }
+}

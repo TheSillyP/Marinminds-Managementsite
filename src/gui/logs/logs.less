@@ -1,0 +1,25 @@
+.logs {
+  .logs--container {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .logs--content {
+    width: 100vw;
+    height: calc(100vh - @layout-header-height);
+    padding: 2em;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .logs--logviewer-container {
+      width: 100%;
+      height: calc(100vh - @layout-header-height - 4em - 40px);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 0.5em;
+    }
+  }
+}

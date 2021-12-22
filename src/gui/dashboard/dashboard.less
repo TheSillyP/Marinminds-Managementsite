@@ -1,0 +1,44 @@
+@import '~react-vis/dist/style';
+
+.dashboard {
+  .dashboard--container {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .dashboard--content {
+    width: 100vw;
+    height: calc(100vh - @layout-header-height);
+    padding: 2em;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .dashboard--chat-wrapper {
+    border-radius: @border-radius-base;
+    background: white;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 3px solid #eee;
+    margin: 0 0 calc(70px + 1em) 2em;
+    height: calc(100vh - 4em - @layout-header-height);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    .dashboard--content {
+      padding: 0;
+    }
+
+    .dashboard--chat-wrapper {
+      margin: 0;
+      border-radius: 0;
+      height: calc(100vh - 0em - @layout-header-height);
+    }
+  }
+}
