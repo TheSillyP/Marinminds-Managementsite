@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Tasks from "./Tasks";
 import EquipmentButtons from "./EquipmentButtons";
-import { Layout } from "antd";
+import { Layout, Tabs } from "antd";
 import Equipments from "./Equipments";
 import { Header } from "../../_partials/header";
 import "./pms.less";
@@ -83,18 +83,24 @@ function PMS({ history, location, match }) {
           <Layout>
             <Header {...{ history, location, match }} />
             <Layout.Content className="pms pms--content">
-              <EquipmentButtons
-                equipmentCategories={allEquipmentCategories}
-                equipmentSubCategories={allEquipmentSubCategories}
-                filterTasks={filterEquipments}
-              ></EquipmentButtons>
-              <Equipments equipments={equipmentItems} />
-              <EquipmentButtons
-                equipmentCategories={allEquipmentCategories}
-                equipmentSubCategories={allEquipmentSubCategories}
-                filterTasks={filterTasks}
-              />
-              <Tasks tasks={taskItems} />
+              <Tabs>
+                <Tabs.TabPane tab={<span>Equipment</span>} key="Equipment">
+                  <EquipmentButtons
+                    equipmentCategories={allEquipmentCategories}
+                    equipmentSubCategories={allEquipmentSubCategories}
+                    filterTasks={filterEquipments}
+                  ></EquipmentButtons>
+                  <Equipments equipments={equipmentItems} />
+                </Tabs.TabPane>
+                <Tabs.TabPane tab={<span>Tasks</span>} key="Tasks">
+                  <EquipmentButtons
+                    equipmentCategories={allEquipmentCategories}
+                    equipmentSubCategories={allEquipmentSubCategories}
+                    filterTasks={filterTasks}
+                  />
+                  <Tasks tasks={taskItems} />
+                </Tabs.TabPane>
+              </Tabs>
             </Layout.Content>
           </Layout>
         </div>
