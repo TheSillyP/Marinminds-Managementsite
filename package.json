@@ -15,6 +15,7 @@
     "ant-table-extensions": "^1.1.7",
     "antd": "^4.6.6",
     "aws-amplify": "^3.3.4",
+    "axios": "^0.24.0",
     "md5": "^2.3.0",
     "mobx": "^6.0.1",
     "mobx-react-lite": "^3.0.1",

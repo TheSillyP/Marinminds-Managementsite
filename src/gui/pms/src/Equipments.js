@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table } from "ant-table-extensions";
+import { Button } from "antd";
 
 const Equipments = ({ equipments }) => {
   return (
     <div>
+      <div>
+        <Button type="primary"></Button>
+      </div>
       <Table
         columns={[
           { dataIndex: "equipment_name", title: "Name" },
