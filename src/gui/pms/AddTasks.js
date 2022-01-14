@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
-import { Form, Input, Modal } from "antd";
+import { Form, Input, Modal, Select, InputNumber } from "antd";
+const { Option } = Select;
 
 const layout = {
   labelCol: { span: 8 },
@@ -62,19 +63,23 @@ export const AddTasks = ({ visible, onCreate, onCancel }) => {
           name="status"
           rules={[{ required: true, message: "Please fill in a status!" }]}
         >
-          <Input />
+          <Select>
+            <Option value="Upcoming">Upcoming</Option>
+            <Option value="Near Due">Near Due</Option>
+            <Option value="Overdue">Overdue</Option>
+          </Select>
         </Form.Item>
         <Form.Item
-          label="Description"
-          name="description"
-          rules={[{ required: true, message: "Please fill in a description!" }]}
+          label="Category"
+          name="category"
+          rules={[{ required: true, message: "Please fill in category!" }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
-          label="Supplier"
-          name="supplier"
-          rules={[{ required: true, message: "Please fill in supllier!" }]}
+          label="Subcategory"
+          name="subcategory"
+          rules={[{ required: true, message: "Please fill in subcategory!" }]}
         >
           <Input />
         </Form.Item>
@@ -83,7 +88,11 @@ export const AddTasks = ({ visible, onCreate, onCancel }) => {
           name="type"
           rules={[{ required: true, message: "Please fill in type!" }]}
         >
-          <Input />
+          <Select>
+            <Option value="Maintenance">Maintenance</Option>
+            <Option value="Inspection">Inspection</Option>
+            <Option value="Refit">Refit</Option>
+          </Select>
         </Form.Item>
         <Form.Item
           label="Frequency type"
@@ -92,62 +101,29 @@ export const AddTasks = ({ visible, onCreate, onCancel }) => {
             { required: true, message: "Please fill in frequency type!" },
           ]}
         >
-          <Input />
+          <Select>
+            <Option value="Time">Time</Option>
+            <Option value="Usage">Usage</Option>
+            <Option value="Time and usage">Time and usage</Option>
+          </Select>
         </Form.Item>
         <Form.Item
-          label="Interval usage"
+          label="Interval usage in hours"
           name="interval_usage"
           rules={[
             { required: true, message: "Please fill in interval usage!" },
           ]}
         >
-          <Input />
+          <InputNumber />
         </Form.Item>
         <Form.Item
-          label="Interval time"
+          label="Interval time in days"
           name="interval_time"
           rules={[
             { required: true, message: "Please fill in a interval time!" },
           ]}
         >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Due in hours"
-          name="due_in_hours"
-          rules={[{ required: true, message: "Please fill in due in hours!" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Due in days"
-          name="due_in_days"
-          rules={[{ required: true, message: "Please fill in due in days!" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Last done usage"
-          name="last_done_usage"
-          rules={[
-            { required: true, message: "Please fill in last done usage!" },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Last done time"
-          name="last_done_time"
-          rules={[{ required: true, message: "Please fill in last done time" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label="Next done usage"
-          name="next_done_time"
-          rules={[{ required: true, message: "Please fill in usage" }]}
-        >
-          <Input />
+          <InputNumber />
         </Form.Item>
       </Form>
     </Modal>

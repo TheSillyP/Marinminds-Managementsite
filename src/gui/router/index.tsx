@@ -16,7 +16,7 @@ import { Users } from '../users'
 import { Logs } from '../logs'
 import { Events } from '../events'
 import { Yachtservice } from '../yachtservice'
-import PMS from '../pms/src/App'
+import PMS from '../pms/index'
 
 
 import { CreateYacht } from '../_partials/create-yacht'

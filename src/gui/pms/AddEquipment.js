@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
-import { Form, Input, Modal } from "antd";
+import { Form, Input, InputNumber, Modal, Upload, Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 
 const layout = {
   labelCol: { span: 5 },
@@ -97,7 +98,17 @@ export const AddEquipment = ({ visible, onCreate, onCancel }) => {
             },
           ]}
         >
-          <Input />
+          <InputNumber />
+        </Form.Item>
+        <Form.Item
+          label="Equipment Certificate"
+          name="certificate"
+          style={{ width: 700 }}
+        >
+          <Upload>
+            <Button icon={<UploadOutlined />}>Upload</Button>
+          </Upload>
+          ,
         </Form.Item>
       </Form>
     </Modal>
