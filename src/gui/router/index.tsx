@@ -15,7 +15,6 @@ import { Error } from '../error'
 import { Users } from '../users'
 import { Logs } from '../logs'
 import { Events } from '../events'
-import { Yachtservice } from '../yachtservice'
 import PMS from '../pms/index'
 
 
@@ -49,7 +48,6 @@ export const Router: React.FC<IPropTypes> = observer(() => {
         <Route exact={true} path="/logs" component={Logs} />
         <Route exact={true} path="/events" component={Events} />
         <Route exact={true} path="/management" component={Users} />
-        <Route exact={true} path="/yachtservice" component={Yachtservice} />
         <Route exact={true} path="/pms" component={PMS} />
 
       </Switch>

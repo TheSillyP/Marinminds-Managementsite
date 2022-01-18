@@ -33,7 +33,7 @@ export const Login: React.FC<IPropTypes> = observer(() => {
             <StyledInput block={true} label='Email address' icon={<MailOutlined />} inputProps={{ value: auth.email, onChange: setTargetValue('email') }} />
           </Form.Item>
 
-          <Form.Item name='password'>
+          <Form.Item name='Password'>
             <StyledInput block={true} password={true} label='Password' icon={<EyeOutlined />} inputProps={{ value: auth.password, onChange: setTargetValue('password') }} />
           </Form.Item>
 

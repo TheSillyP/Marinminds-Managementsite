@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import { Form, Input, InputNumber, Modal, Upload, Button } from "antd";
+import { Form, Input, Upload, Button, Modal } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 
 const layout = {
@@ -56,12 +56,12 @@ export const AddEquipment = ({ visible, onCreate, onCancel }) => {
         <Form.Item
           label="Make"
           name="make"
-          rules={[{ required: true, message: "Please fill in a title!" }]}
+          rules={[{ required: true, message: "Please fill in a make!" }]}
         >
           <Input />
         </Form.Item>
         <Form.Item
-          label="Category"
+          label="Categorie"
           name="category"
           rules={[{ required: true, message: "Please fill in a category!" }]}
         >
@@ -87,18 +87,6 @@ export const AddEquipment = ({ visible, onCreate, onCancel }) => {
           rules={[{ required: true, message: "Please fill in a partnumber!" }]}
         >
           <Input />
-        </Form.Item>
-        <Form.Item
-          label="Usage Hours"
-          name="usage_hrs"
-          rules={[
-            {
-              required: true,
-              message: "Please fill in the amount of usage hours!",
-            },
-          ]}
-        >
-          <InputNumber />
         </Form.Item>
         <Form.Item
           label="Equipment Certificate"

@@ -67,15 +67,15 @@ function PMS({ history, location, match }) {
     ...new Set(tasks.map((task) => task.Task_subcategory)),
   ];
 
-  const filterTasks = (equipment) => {
+  const filterTasks = (category) => {
     //Deze functie zorgt ervoor dat alleen de taken worden weergegeven van de category of subcategory die is geselecteerd
-    if (equipment === "All") {
+    if (category === "All") {
       setTaskItems(tasks);
       return;
     }
     const newItems = tasks.filter(
       (task) =>
-        task.Task_category === equipment || task.Task_subcategory === equipment
+        task.Task_category === category || task.Task_subcategory === category
     );
     setTaskItems(newItems);
     console.log(newItems);
@@ -98,17 +98,17 @@ function PMS({ history, location, match }) {
     }
   };
 
-  const filterEquipments = (equipment) => {
+  const filterEquipments = (category) => {
     //Deze functie zorgt ervoor dat alleen de equipments worden weergegeven van de category of subcategory die is geselecteerd
-    if (equipment === "All") {
+    if (category === "All") {
       setEquipmentItems(equipments);
       console.log(equipments);
       return;
     }
     const newItems = equipments.filter(
       (equipmentItem) =>
-        equipmentItem.equipment_category === equipment ||
-        equipmentItem.equipment_subcategory === equipment
+        equipmentItem.equipment_category === category ||
+        equipmentItem.equipment_subcategory === category
     );
     setEquipmentItems(newItems);
     console.log(newItems);
